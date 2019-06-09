@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if pmset -g batt | grep -q AC; then
+    echo "⚡"
+else
+    echo "♥"
+fi
+
+pmset -g batt | grep -o '[0-9]*%'

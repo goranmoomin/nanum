@@ -1,0 +1,13 @@
+{
+    "name": "nanum",
+    "main": "index.jsx",
+    "dependencies": {
+        "babel-polyfill": "^6.26.0",
+        "date-fns": "^2.0.0-alpha.27",
+        "jss": "^9.8.7",
+        "jss-preset-default": "^4.5.0"
+    },
+    "devDependencies": {
+        "@types/jss": "^9.5.8"
+    }
+}
