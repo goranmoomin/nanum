@@ -137,6 +137,6 @@ const updateState = ({ type, output }, prevState) => {
     }
 };
 
-const refreshFrequency = 500;
+const refreshFrequency = 5000;
 
 module.exports = { render, command, updateState, refreshFrequency };
