@@ -9,15 +9,12 @@ const { format } = require("date-fns");
 jss.setup(preset());
 
 const styles = {
-    screen: {
-        width: "100vw",
-        height: "100vh"
-    },
     background: {
         backgroundColor: "#3c3c3c",
         alignItems: "center",
         position: "relative",
         height: 38,
+        width: "calc(100vw - 20%)",
         top: 0,
         right: 0,
         bottom: "auto",
@@ -91,27 +88,25 @@ const { classes } = jss.createStyleSheet(styles).attach();
 
 const render = ({ workspace, network, battery, date, time }) => {
     return (
-        <div className={classes.screen}>
-            <div className={classes.background}>
-                <div className={classes.flex}>
-                    <div className={classes.workspaceBackground}>
-                        <span className={classes.workspaceText}>{workspace}</span>
+        <div className={classes.background}>
+            <div className={classes.flex}>
+                <div className={classes.workspaceBackground}>
+                    <span className={classes.workspaceText}>{workspace}</span>
                     </div>
-                    <div className={classes.networkBackground}>
-                        <span className={classes.networkText}>{network}</span>
-                    </div>
-                    <div className={classes.middle}/>
-                    <div className={classes.batteryBackground}>
-                        <span className={classes.batteryText}>{battery}</span>
-                    </div>
-                    <div className={classes.clockBackground}>
-                        <span className={classes.clockText}>{time}</span>
-                    </div>
+                <div className={classes.networkBackground}>
+                    <span className={classes.networkText}>{network}</span>
                 </div>
-                <div className={classes.dateBackground}>
-                    <span className={classes.dateText}>{date}</span>
+                <div className={classes.middle}/>
+                <div className={classes.batteryBackground}>
+                    <span className={classes.batteryText}>{battery}</span>
                 </div>
+                <div className={classes.clockBackground}>
+                    <span className={classes.clockText}>{time}</span>
+                    </div>
             </div>
+            <div className={classes.dateBackground}>
+                <span className={classes.dateText}>{date}</span>
+                </div>
         </div>
     );
 };
